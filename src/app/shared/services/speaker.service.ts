@@ -23,7 +23,7 @@ export class SpeakerService {
   // }
 
   saveSpeaker(data: any): Observable<any> {
-    return this.http.post('http://localhost:8081/speakers', data)
+    return this.http.post('https://safe-savannah-59407.herokuapp.com/speakers', data)
       .map( (res: Response) => {
         console.log('saveSpeakers', res.json());
         return res.json();

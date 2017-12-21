@@ -12,7 +12,7 @@ export class TalkService {
   }
 
   getTalks(): Observable<any> {
-    return this.http.get('http://localhost:8081/talks')
+    return this.http.get('https://safe-savannah-59407.herokuapp.com/talks')
       .map( (res: Response) => {
         console.log('getTalks', res.json());
         return res.json();
@@ -21,7 +21,7 @@ export class TalkService {
   }
 
   saveTalk(data: any): Observable<any> {
-    return this.http.post('http://localhost:8081/talks', data)
+    return this.http.post('https://safe-savannah-59407.herokuapp.com/talks', data)
       .map( (res: Response) => {
         console.log('saveTalk', res.json());
         return res.json();
